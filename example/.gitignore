@@ -11,3 +11,4 @@ pubspec.lock
 .flutter-plugins
 ios/Podfile.lock
 ios/.symlinks/*
+.flutter-plugins-dependencies

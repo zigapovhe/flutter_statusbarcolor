@@ -11,7 +11,7 @@ class FlutterStatusbarcolor {
       const MethodChannel('plugins.fuyumi.com/statusbar');
 
   /// Get the status bar background color.
-  static Future<Color> getStatusBarColor() =>
+  static Future<Color?> getStatusBarColor() =>
       _channel.invokeMethod('getstatusbarcolor').then((dynamic value) {
         return value == null ? null : Color(value);
       });
@@ -37,7 +37,7 @@ class FlutterStatusbarcolor {
   /// Android only
   ///
   /// Get the navigation bar background color.
-  static Future<Color> getNavigationBarColor() =>
+  static Future<Color?> getNavigationBarColor() =>
       _channel.invokeMethod('getnavigationbarcolor').then((dynamic value) {
         return value == null ? null : Color(value);
       });
