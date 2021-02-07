@@ -1,4 +1,4 @@
-package com.fuyumi.flutterstatusbarcolor.flutterstatusbarcolor
+package com.sameer.flutterstatusbarcolor.flutterstatusbarcolor
 
 import android.os.Build
 import android.app.Activity
@@ -14,7 +14,7 @@ class FlutterStatusbarcolorPlugin private constructor(private val activity: Acti
     companion object {
         @JvmStatic
         fun registerWith(registrar: Registrar): Unit {
-            val channel = MethodChannel(registrar.messenger(), "plugins.fuyumi.com/statusbar")
+            val channel = MethodChannel(registrar.messenger(), "plugins.sameer.com/statusbar")
             channel.setMethodCallHandler(FlutterStatusbarcolorPlugin(registrar.activity()))
         }
     }

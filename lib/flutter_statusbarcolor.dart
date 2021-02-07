@@ -8,7 +8,7 @@ import 'package:flutter/services.dart';
 
 class FlutterStatusbarcolor {
   static const MethodChannel _channel =
-      const MethodChannel('plugins.fuyumi.com/statusbar');
+      const MethodChannel('plugins.sameer.com/statusbar');
 
   /// Get the status bar background color.
   static Future<Color?> getStatusBarColor() =>

@@ -1,4 +1,4 @@
-group 'com.fuyumi.flutterstatusbarcolor.flutterstatusbarcolor'
+group 'com.sameer.flutterstatusbarcolor.flutterstatusbarcolor'
 version '1.0-SNAPSHOT'
 
 buildscript {
