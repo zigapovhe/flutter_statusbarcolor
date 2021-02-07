@@ -92,44 +92,55 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Builder(builder: (BuildContext context) {
-                    return FlatButton(
-                      onPressed: () => FlutterStatusbarcolor.getStatusBarColor()
-                          .then((Color color) {
-                        Scaffold.of(context).showSnackBar(SnackBar(
-                          content: Text(color.toString()),
-                          backgroundColor: color,
-                          duration: const Duration(milliseconds: 200),
+                    return ElevatedButton(
+                        onPressed: () =>
+                            FlutterStatusbarcolor.getStatusBarColor()
+                                .then((Color color) {
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(SnackBar(
+                                content: Text(color.toString()),
+                                backgroundColor: color,
+                                duration: const Duration(milliseconds: 200),
+                              ));
+                            }),
+                        child: Text(
+                          'Show Statusbar Color',
+                          style: TextStyle(color: Colors.white),
                         ));
-                      }),
-                      child: Text(
-                        'Show Statusbar Color',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      color: Colors.black,
-                    );
+                    //   style:
+                    //   ButtonStyle(
+                    //       // backgroundColor:
+                    //       //     MaterialStateProperty.all<Color>(Colors.amber)),
+                    // );
                   }),
                   Padding(padding: const EdgeInsets.all(10.0)),
-                  FlatButton(
+                  ElevatedButton(
                     onPressed: () => changeStatusColor(Colors.transparent),
                     child: Text('Transparent'),
                   ),
                   Padding(padding: const EdgeInsets.all(10.0)),
-                  FlatButton(
+                  ElevatedButton(
                     onPressed: () {
                       Color color = Colors.amberAccent;
                       changeStatusColor(color);
                     },
                     child: Text('amber-accent'),
-                    color: Colors.amberAccent,
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.amberAccent),
+                    ),
                   ),
                   Padding(padding: const EdgeInsets.all(10.0)),
-                  FlatButton(
+                  ElevatedButton(
                     onPressed: () => changeStatusColor(Colors.tealAccent),
                     child: Text('teal-accent'),
-                    color: Colors.tealAccent,
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.tealAccent),
+                    ),
                   ),
                   Padding(padding: const EdgeInsets.all(10.0)),
-                  FlatButton(
+                  ElevatedButton(
                     onPressed: () =>
                         FlutterStatusbarcolor.setStatusBarWhiteForeground(true)
                             .then((_) => _useWhiteStatusBarForeground = true),
@@ -137,18 +148,24 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                       'light foreground',
                       style: TextStyle(color: Colors.white),
                     ),
-                    color: Colors.black,
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.black),
+                    ),
                   ),
                   Padding(padding: const EdgeInsets.all(10.0)),
-                  FlatButton(
+                  ElevatedButton(
                     onPressed: () =>
                         FlutterStatusbarcolor.setStatusBarWhiteForeground(false)
                             .then((_) => _useWhiteStatusBarForeground = false),
                     child: Text('dark foreground'),
-                    color: Colors.white,
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.white),
+                    ),
                   ),
                   Padding(padding: const EdgeInsets.all(10.0)),
-                  FlatButton(
+                  ElevatedButton(
                     onPressed: () {
                       Random rnd = Random();
                       Color color = Color.fromARGB(
@@ -168,7 +185,10 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                             : Colors.black,
                       ),
                     ),
-                    color: _randomStatusColor,
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(_randomStatusColor),
+                    ),
                   ),
                 ],
               ),
@@ -177,11 +197,11 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Builder(builder: (BuildContext context) {
-                    return FlatButton(
+                    return ElevatedButton(
                       onPressed: () =>
                           FlutterStatusbarcolor.getNavigationBarColor()
                               .then((Color color) {
-                        Scaffold.of(context).showSnackBar(SnackBar(
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                           content: Text(color.toString()),
                           backgroundColor: color,
                           duration: const Duration(milliseconds: 200),
@@ -191,31 +211,43 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                         'Show Navigationbar Color',
                         style: TextStyle(color: Colors.white),
                       ),
-                      color: Colors.black,
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Colors.black),
+                      ),
                     );
                   }),
                   Padding(padding: const EdgeInsets.all(10.0)),
-                  FlatButton(
+                  ElevatedButton(
                     onPressed: () => changeNavigationColor(Colors.green[400]),
                     child: Text('Green-400'),
-                    color: Colors.green[400],
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.green[400]),
+                    ),
                   ),
                   Padding(padding: const EdgeInsets.all(10.0)),
-                  FlatButton(
+                  ElevatedButton(
                     onPressed: () =>
                         changeNavigationColor(Colors.lightBlue[100]),
                     child: Text('LightBlue-100'),
-                    color: Colors.lightBlue[100],
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.lightBlue[100]),
+                    ),
                   ),
                   Padding(padding: const EdgeInsets.all(10.0)),
-                  FlatButton(
+                  ElevatedButton(
                     onPressed: () =>
                         changeNavigationColor(Colors.cyanAccent[200]),
                     child: Text('CyanAccent-200'),
-                    color: Colors.cyanAccent[200],
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.cyan[200]),
+                    ),
                   ),
                   Padding(padding: const EdgeInsets.all(10.0)),
-                  FlatButton(
+                  ElevatedButton(
                     onPressed: () => FlutterStatusbarcolor
                             .setNavigationBarWhiteForeground(true)
                         .then((_) => _useWhiteNavigationBarForeground = true),
@@ -223,18 +255,24 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                       'light foreground',
                       style: TextStyle(color: Colors.white),
                     ),
-                    color: Colors.black,
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.black),
+                    ),
                   ),
                   Padding(padding: const EdgeInsets.all(10.0)),
-                  FlatButton(
+                  ElevatedButton(
                     onPressed: () => FlutterStatusbarcolor
                             .setNavigationBarWhiteForeground(false)
                         .then((_) => _useWhiteNavigationBarForeground = false),
                     child: Text('dark foreground'),
-                    color: Colors.white,
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.white),
+                    ),
                   ),
                   Padding(padding: const EdgeInsets.all(10.0)),
-                  FlatButton(
+                  ElevatedButton(
                     onPressed: () {
                       Random rnd = Random();
                       Color color = Color.fromARGB(
@@ -254,7 +292,10 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                             : Colors.black,
                       ),
                     ),
-                    color: _randomNavigationColor,
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          _randomNavigationColor),
+                    ),
                   ),
                 ],
               ),
