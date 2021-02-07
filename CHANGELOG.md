@@ -1,5 +1,7 @@
 # Changelog
+## [0.3.0-nullsafety]
 
+* Migrate to Null Safety
 ## [0.2.3]
 
 * Fix iOS 13+ Dark mode.

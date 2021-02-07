@@ -6,7 +6,7 @@
 
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterMethodChannel* channel = [FlutterMethodChannel
-      methodChannelWithName:@"plugins.fuyumi.com/statusbar"
+      methodChannelWithName:@"plugins.sameer.com/statusbar"
             binaryMessenger:[registrar messenger]];
   FlutterStatusbarcolorPlugin* instance = [[FlutterStatusbarcolorPlugin alloc] init];
   [registrar addMethodCallDelegate:instance channel:channel];
