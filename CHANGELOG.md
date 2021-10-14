@@ -1,4 +1,8 @@
 # Changelog
+
+## [0.3.0-nullsafety]
+
+* Migrate Android v2 Embedding
 ## [0.3.0-nullsafety]
 
 * Migrate to Null Safety

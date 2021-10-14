@@ -2,6 +2,8 @@
 
 [![pub package](https://img.shields.io/badge/pub-v%203.0.0--nullsafety-orange.svg)](https://pub.dev/packages/flutter_statusbarcolor)
 
+The package now supports to android v2 embedding, thanks to [vixez](https://github.com/Sameerkash/flutter_statusbarcolor/pull/1)
+
 A package can help you to change your flutter app's statusbar's color or navigationbar's color programmatically.
 
 This is a fork of the original package `flutter_statusbarcolor` migrated to support null-safety.
