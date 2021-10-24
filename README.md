@@ -1,6 +1,6 @@
 # flutter_statusbarcolor_ns
 
-[![pub package](https://img.shields.io/badge/pub-v%203.0.0--nullsafety-orange.svg)](https://pub.dev/packages/flutter_statusbarcolor)
+[![pub package](https://img.shields.io/pub/v/flutter_statusbarcolor_ns?style=for-the-badge)](https://pub.dev/packages/flutter_statusbarcolor)
 
 The package now supports to android v2 embedding, thanks to [vixez](https://github.com/Sameerkash/flutter_statusbarcolor/pull/1)
 
