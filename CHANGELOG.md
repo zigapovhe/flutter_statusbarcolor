@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.5.0]
+
+* Bump Android SDK and Kotlin version
 ## [0.4.0]
 
 * Migrate Android v2 Embedding
